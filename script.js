@@ -1,9 +1,8 @@
-const slides = document.getElementById('slides');
 let index = 0;
+const slides = document.getElementById("slides");
+const totalSlides = slides.children.length;
 
-function showNextSlide() {
-  index = (index + 1) % 3; // Jumlah slide (ubah jika jumlah gambar berubah)
+setInterval(() => {
+  index = (index + 1) % totalSlides;
   slides.style.transform = translateX(-${index * 100}vw);
-}
-
-setInterval(showNextSlide, 3000); // Ganti slide setiap 3 detik
+}, 3000);

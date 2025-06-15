@@ -29,12 +29,13 @@ nav a {
 .slider {
   position: relative;
   overflow: hidden;
+  width: 100vw;
 }
 
 .slides {
   display: flex;
   transition: transform 0.5s ease-in-out;
-  width: 300%;
+  width: 200%;
 }
 
 .slides img {
@@ -47,24 +48,35 @@ nav a {
   background: #f5f5f5;
 }
 
-.produk-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  gap: 1rem;
+.produk-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  gap: 20px;
 }
 
 .produk-item {
   background: white;
   padding: 1rem;
   text-align: center;
-  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  width: 100px;
+  box-shadow: 0 0 10px red;
   transition: transform 0.3s ease;
   text-decoration: none;
-  color: inherit;
+  color: black;
+  border-radius: 10px;
+  max-height: 250px;
+  overflow: hidden;
 }
 
 .produk-item:hover {
   transform: translateY(-5px);
+}
+
+.produk-item img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
 }
 
 #kontak {
@@ -117,4 +129,48 @@ footer {
   font-size: 30px;
   text-decoration: none;
   box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+}
+
+.harga {
+  color: #d32f2f;
+  font-weight: bold;
+  margin-top: 0.5rem;
+  font-size: 16px;
+}
+
+.harga {
+  margin-top: 0.5rem;
+  font-size: 16px;
+}
+
+.harga-lama {
+  text-decoration: line-through;
+  color: #888;
+  margin-right: 8px;
+}
+
+.harga-diskon {
+  color: #d32f2f;
+  font-weight: bold;
+}
+
+.whatsapp-button {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  overflow: hidden;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+  background-color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.whatsapp-button img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
 }
